@@ -60,4 +60,7 @@ We cut unnecessary part of the image, extract the muscles and fat part using HU-
     --model 'axcosa' \
     --load_path '../saved_model/S_M_C/axcosa/1/'
     ```
+<<<<<<< HEAD
 
+=======
+>>>>>>> 123d8f8cf99f61e1f80991a75e46898d90deceba
