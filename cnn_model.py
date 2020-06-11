@@ -152,9 +152,6 @@ class CNN_Model(tf.keras.Model):
         self.fc_sa = Dense(4, activation='relu', kernel_initializer='glorot_uniform', kernel_regularizer=tf.keras.regularizers.l2(0.02))
         self.fc1 = Dense(1, activation='sigmoid', kernel_initializer='glorot_uniform', kernel_regularizer=tf.keras.regularizers.l2(0.02))
         self.fc2 = Dense(3, activation='softmax', kernel_initializer='glorot_uniform', kernel_regularizer=tf.keras.regularizers.l2(0.02))
-   
-
-
 
     def call(self, x, training=True):
         if 'ax' in self.mode:
