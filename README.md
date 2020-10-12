@@ -2,8 +2,8 @@
 This repository shows how to preprocss data and train/test model from CT data using Tensorflow and Opencv.
 
 ## [Datasets]
-Our datasets cannot be used in public. To run this code, you should use your own datasets.  
-Or you can use our sample datasets made by random number only for test.  
+* Our datasets cannot be used in public. To run this code, you should use your own datasets.  
+* Or you can use our sample datasets made by random number only for test.  
 
 ## [Requirements]
 * ### tensorflow-gpu
