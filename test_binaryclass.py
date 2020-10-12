@@ -24,11 +24,11 @@ def parse_args():
     """ Take arguments from user inputs."""
     parser = ArgumentParser(description='Binary Classification')
     parser.add_argument('--data_path', help='Directory path for preprocessed data', 
-            default='./data/S_C',  type=str)
+            default='./sample_data/',  type=str)
     parser.add_argument('--model', help='Model: ax, co, sa, axco, axsa, cosa, axcosa',
             default='axcosa', type=str)
     parser.add_argument('--load_path', help='Path of Saved Model Checkpoint',
-            default='./saved_model/S_C/axcosa/1/', type=str)
+            default='./saved_model/S_C/', type=str)
 
     args = parser.parse_args()
     return args
@@ -36,7 +36,7 @@ def parse_args():
 def main(data_path, mode, load_path):
     # Model
     model = CNN_Model(mode=mode, multiclass=False)
-    model.load_weights(load_path + 'my_chekpoint')
+    model.load_weights(load_path + 'my_chekpoint').expect_partial()
 
     # Load Dataset
     fn_list = glob.glob(data_path + '*.npy')

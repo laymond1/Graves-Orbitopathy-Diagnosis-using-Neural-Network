@@ -175,23 +175,6 @@ def main(idx, imgs, epochs, batch_size, label, d, mode, result_path , multiclass
     acc = (tn + tp) / (tn+tp+fn+fp)
     print('Test Accuracy : {}, {} dataset, {} model saved in saved_model/{}/{}/{}/my_checkpoint'.format(acc, d, mode, d, mode, idx+1))
 
-
-
-    # model.load_weights('./saved_model/s_m_c/my_chekpoint')
-
-    # import time
-    # pp = '../new4/data/s_m_c/control/'
-    # pp_fn = os.listdir(pp)[:30]
-    # for k in pp_fn:   
-    #     test_img = np.load(pp + k)
-    #     test_img = test_img.reshape((1, 128, 128, 96))
-    #     start = time.time() 
-    #     pred = model(test_img)
-    #     pred = np.argmax(pred, 1)
-    #     print(pred)
-
-
-
 if __name__ == '__main__':
     args = parse_args()
 
@@ -236,7 +219,6 @@ if __name__ == '__main__':
         np.random.seed(seed_value[i])
 
         # 4. 'tensorflow'
-        # tf.set_random_seed(seed_value)
         tf.random.set_seed(seed_value[i])
         ###############################################
         print("Iteration: %d" %(i+1))

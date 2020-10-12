@@ -200,7 +200,6 @@ if __name__ == '__main__':
         np.random.seed(seed_value[i])
 
         # 4. 'tensorflow'
-        # tf.set_random_seed(seed_value)
         tf.random.set_seed(seed_value[i])
         ###############################################
         print("Iteration: %d" %(i+1))
