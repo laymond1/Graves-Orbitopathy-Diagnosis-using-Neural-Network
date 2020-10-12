@@ -1,6 +1,10 @@
 # Graves-Orbitopathy-Diagnosis-using-Neural-Network
 This repository shows how to preprocss data and train/test model from CT data using Tensorflow and Opencv.
 
+## [Datasets]
+Our datasets cannot be used in public. To run this code, you should use your own datasets.  
+Or you can use our sample datasets made by random number only for test.  
+
 ## [Requirements]
 * ### tensorflow-gpu
 * ### keras 
@@ -49,14 +53,14 @@ We cut unnecessary part of the image, extract the muscles and fat part using HU-
     
     - #### Test BinaryClass Model
     ``` bash
-    python test_binaryclass.py --data_path '../data/S_C/' \
+    python test_binaryclass.py --data_path './sample_data/' \
     --model 'axcosa' \
-    --load_path './saved_model/S_C/axcosa/1/'
+    --load_path './saved_model/S_C/'
     ```
 
     - #### Test MultiClass Model
     ``` bash
-    python test_multiclass.py --data_path './data/S_M_C/' \
+    python test_multiclass.py --data_path './sample_data/' \
     --model 'axcosa' \
-    --load_path '../saved_model/S_M_C/axcosa/1/'
+    --load_path './saved_model/S_M_C/'
 
