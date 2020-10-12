@@ -12,7 +12,7 @@ from cnn_model import CNN_Model
 
 from argparse import ArgumentParser
 
-""" python train_multiclass.py --data_path '../new4/data/S_M_C/' --dataset 'S_M_C' --model 'axcosa' --iteration 1 --result_path '../new5/results/' --check_path '../new5/saved_model/' """
+""" python train_multiclass.py --data_path './data/S_M_C/' --dataset 'S_M_C' --model 'axcosa' --iteration 1 --result_path './results/' --check_path './saved_model/' """
 
 def parse_args():
     """ Take arguments from user inputs."""

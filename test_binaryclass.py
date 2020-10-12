@@ -18,7 +18,7 @@ S_M : 0: Mild, 1: Severe
 M_C : 0: Control, 1: Mild 
 """
 
-""" python test_binaryclass.py --data_path '../new4/data/S_C/' --model 'axcosa' --load_path '../new5/saved_model/S_C/axcosa/1/' """
+""" python test_binaryclass.py --data_path './sample_data/' --model 'axcosa' --load_path './saved_model/S_C/' """
 
 def parse_args():
     """ Take arguments from user inputs."""

@@ -14,7 +14,7 @@ from argparse import ArgumentParser
 
 """ 0: Control, 1: Severe, 2: Mild """
 
-""" python test_multiclass.py --data_path '../new4/data/S_M_C/' --model 'axcosa' --load_path '../new5/saved_model/S_M_C/axcosa/' """
+""" python test_multiclass.py --data_path './sample_data/' --model 'axcosa' --load_path './saved_model/S_M_C/' """
 
 def parse_args():
     """ Take arguments from user inputs."""
