@@ -53,14 +53,14 @@ We cut unnecessary part of the image, extract the muscles and fat part using HU-
     
     - #### Test BinaryClass Model
     ``` bash
-    python test_binaryclass.py --data_path '../data/S_C/' \
+    python test_binaryclass.py --data_path '../sample_data/' \
     --model 'axcosa' \
-    --load_path './saved_model/S_C/axcosa/1/'
+    --load_path './saved_model/S_C/'
     ```
 
     - #### Test MultiClass Model
     ``` bash
-    python test_multiclass.py --data_path './data/S_M_C/' \
+    python test_multiclass.py --data_path './sample_data/' \
     --model 'axcosa' \
-    --load_path '../saved_model/S_M_C/axcosa/1/'
+    --load_path '../saved_model/S_M_C/'
 
