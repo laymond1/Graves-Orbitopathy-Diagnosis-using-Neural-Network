@@ -18,7 +18,7 @@ def parse_args():
     """ Take arguments from user inputs."""
     parser = ArgumentParser(description='Binary Classification')
     parser.add_argument('--data_path', help='Directory path for data', 
-            default='./data/output/',  type=str)
+            default='./data/S_C/',  type=str)
     parser.add_argument('--dataset', help='Dataset: S_C or S_M or M_C',
             default='S_C', type=str)
     parser.add_argument('--model', help='Model: ax, co, sa, axco, axsa, cosa, axcosa',
@@ -61,7 +61,7 @@ def test_step(model, x, y, loss_fn):
     
 def main(idx, imgs, epochs, batch_size, label, d, mode, result_path , multiclass=False):
     # Train and Test Data Split
-    x_train, x_test, y_train, y_test = train_test_split(imgs, label, train_size=0.8, stratify=label, shuffle=True)
+    x_train, x_test, y_train, y_test = train_test_split(imgs, label, train_size=0.8, stratify=label, shuffle=True, random_state=idx)
     print(x_train.shape)
     print(x_test.shape)
 

@@ -19,7 +19,7 @@ class CNN_Model(tf.keras.Model):
         self.avg_pool = GlobalAveragePooling2D()
 
         self._build_stem()
-        self._build_depthwisw()
+        self._build_depthwise()
         self._build_final()
 
     def _build_stem(self):
@@ -63,7 +63,7 @@ class CNN_Model(tf.keras.Model):
             epsilon=self._batch_norm_epsilon,
             fused=True)
     
-    def _build_depthwisw(self):
+    def _build_depthwise(self):
         self.ax_conv = DepthwiseConv2D(
             kernel_size=[3, 3], 
             strides=[1, 1], 

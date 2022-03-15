@@ -18,7 +18,7 @@ def parse_args():
     """ Take arguments from user inputs."""
     parser = ArgumentParser(description='Multiclass Classification')
     parser.add_argument('--data_path', help='Directory path for data', 
-            default='./data/output/',  type=str)
+            default='./data/S_M_C/',  type=str)
     parser.add_argument('--dataset', help='Dataset: S_M_C',
             default='S_M_C', type=str)
     parser.add_argument('--model', help='Model: ax, co, sa, axco, axsa, cosa, axcosa',
@@ -60,7 +60,7 @@ def test_step(model, x, y, loss_fn):
     
 def main(idx, imgs, epochs, batch_size, label, d, mode, result_path , multiclass=False):
     # Train and Test Data Split
-    x_train, x_test, y_train, y_test = train_test_split(imgs, label, train_size=0.8, stratify=label, shuffle=True)
+    x_train, x_test, y_train, y_test = train_test_split(imgs, label, train_size=0.8, stratify=label, shuffle=True, random_state=idx)
     print(x_train.shape)
     print(x_test.shape)
 
@@ -159,7 +159,7 @@ def main(idx, imgs, epochs, batch_size, label, d, mode, result_path , multiclass
 
     # Save Final Sensitivity & Specificity & Confusion Matrix
     preds = np.argmax(preds, 1)
-    preds = label_binarize(preds, [0,1,2])
+    preds = label_binarize(preds, classes=[0,1,2])
     print(confusion_matrix(y.ravel(), preds.ravel()))
     tn, fp, fn, tp = confusion_matrix(y.ravel(), preds.ravel()).ravel()
     sensitivity = tp / (tp+fn)

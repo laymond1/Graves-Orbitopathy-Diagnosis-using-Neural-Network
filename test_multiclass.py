@@ -18,7 +18,7 @@ from argparse import ArgumentParser
 
 def parse_args():
     """ Take arguments from user inputs."""
-    parser = ArgumentParser(description='Binary Classification')
+    parser = ArgumentParser(description='Multiclass Classification')
     parser.add_argument('--data_path', help='Directory path for preprocessed data', 
             default='./sample_data/',  type=str)
     parser.add_argument('--model', help='Model: ax, co, sa, axco, axsa, cosa, axcosa',
