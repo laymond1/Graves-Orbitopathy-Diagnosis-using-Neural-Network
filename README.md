@@ -6,7 +6,7 @@ This repository shows how to preprocss data and train/test model from CT data us
 * #### Or you can use our sample datasets made by random number only for test.  
 
 ## [Requirements]
-* ### tensorflow-gpu
+* ### tensorflow
 * ### keras 
 * ### opencv-python
 * ### scikit-learn
